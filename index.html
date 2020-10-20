@@ -21,16 +21,34 @@
       </div>
 
       <div class="container">
-        <div id="score-container">
+        <div id="score-container" class="hide">
           <div id="score"></div>
-          <form></form>
+          <br />
+          <div>
+            <ul class="score-list">
+              <li>test</li>
+              <li>test</li>
+            </ul>
+          </div>
+          <br />
+          <div>
+            <form>
+              <input type="text" id="initials" />
+              <input type="submit" id="submitHighScore" value="Submit" />
+              <input type="submit" id="clear" value="Clear Scores" />
+            </form>
+          </div>
         </div>
       </div>
 
-      <div class="controls">
+      <div class="container" id="controls">
+        <h1>Welcome to the Coding Quiz!!</h1>
+
+        <h3>Press "Start" to Begin</h3>
+
         <button id="start-btn" class="start-btn, btn">Start</button>
       </div>
-      <div class="rightWrong" , id="alertUser"></div>
+      <div class="rightWrong" id="alertUser"></div>
     </div>
   </body>
 </html>
