@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code Quiz</title>
-    <link rel="stylesheet" href="Assets/style.css" />
-    <script src="Assets/scrpit.js" defer></script>
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Timer -->
     <div class="timer" id="time-display"></div>
+
     <div class="container">
-      <div id="question-container" , class="hide">
-        <div id="question">Question</div>
+      <!-- Start Screen -->
+      <div id="start-screen">
+        <h1>Welcome to the Coding Quiz!!</h1>
+        <h3>Press "Start" to Begin</h3>
+        <button id="start-btn" class="btn">Start</button>
+      </div>
+
+      <!-- Quiz Questions -->
+      <div id="question-container" class="hide">
+        <h4 id="question">Question</h4>
         <div id="answer-buttons" class="button-grid">
           <button class="btn">Answer 2</button>
           <button class="btn">Answer 3</button>
@@ -20,35 +29,36 @@
         </div>
       </div>
 
-      <div class="container">
-        <div id="score-container" class="hide">
-          <div id="score"></div>
-          <br />
-          <div>
-            <ul class="score-list">
-              <li>test</li>
-              <li>test</li>
-            </ul>
-          </div>
-          <br />
-          <div>
-            <form>
-              <input type="text" id="initials" />
-              <input type="submit" id="submitHighScore" value="Submit" />
-              <input type="submit" id="clear" value="Clear Scores" />
-            </form>
-          </div>
+      <!--Score Display -->
+      <div id="score-container" class="hide">
+        <h4 id="score"></h4>
+        <br />
+        <div class="scores">
+          <ul id="score-list"></ul>
+        </div>
+        <br />
+        <div>
+          <form>
+            <input
+              type="text"
+              id="initials"
+              required=" please submit initials"
+            />
+            <br />
+            <input
+              class="btn"
+              type="submit"
+              id="submitHighScore"
+              value="Submit"
+            />
+            <input class="btn" type="submit" id="clear" value="Clear Scores" />
+          </form>
         </div>
       </div>
 
-      <div class="container" id="controls">
-        <h1>Welcome to the Coding Quiz!!</h1>
-
-        <h3>Press "Start" to Begin</h3>
-
-        <button id="start-btn" class="start-btn, btn">Start</button>
-      </div>
+      <!-- Question Right or Wrong Alert -->
       <div class="rightWrong" id="alertUser"></div>
     </div>
+    <script src="scrpit.js"></script>
   </body>
 </html>
